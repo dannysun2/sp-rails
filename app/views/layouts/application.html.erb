@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title><%= @title %></title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+   <%=stylesheet_link_tag "application" %>
+   <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<header>
+   <div class="overlay">
+
+      <div class='row no-gutter'>
+         <div class='col-md-6 hidden-sm text-center hidden-xs'>
+            <p><%= link_to "Home", root_path %></p>
+         </div>
+         <div class='col-md-6 col-xs-12'>
+            <ul class='list-unstyled list-inline text-center'>
+               <li>About</li>
+               <li>Search</li>
+               <li><i class='glyphicon glyphicon-search'></i>
+               </ul>
+            </div>
+            <h1 class='text-center'>Surf & Paddle Co.</h1>
+            <h2 class='text-center'>An Ironyard Academy Est. Fall 2013</h2>
+
+         </div>
+      </header>
+
+      <div class="container">
+
+         <div class="row no-gutter">
+            <div class="col-md-8 col-xs-12">
+
+               <content-left>
+                  <%=yield%>
+               </content-left>
+                  </div>
+
+                  <content-right>
+                     <div class="col-md-offset-1 col-md-3 col-xs-12">
+                        <div class='right'>
+                           <div class='imgoverlay'>
+                              <%= image_tag("06403b4.jpg", :class => "img-responsive img-circle") %>
+                           </div>
+                           <h3 class='text-center'>Danny Sun</h3>
+                           <ul class='list-unstyled list-inline text-center'>
+                              <li>Twitter</li>
+                              <li>Facebook</li>
+                              <li>Instagram</li>
+                           </ul>
+                           <%= image_tag("yoga2.jpg", :class => "img-responsive") %>
+                           <div class='hidden-xs'>
+                              <h1>About Me</h1>
+                              <p>Lorem ipsum dolor sit amet, vis vidisse docendi intellegam an, et per etiam iriure integre, ad vel zril vocent noluisse. Vide molestie disputando at quo, in adhuc minim eam. Iisque ponderum indoctum est at, aeque postea at has. Ius dicam inciderint cotidieque ex, cu harum essent convenire usu, rebum inani referrentur eam cu. Vel eu nihil volumus legendos.</p>
+                           </div>
+                           </div
+                        </content-right>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+               <footer>
+                  <div class='row no-gutter'>
+                     <h1 class='text-center'>More popular posts</h1>
+                  </div>
+
+
+
+                  <div class='row no-gutter'>
+                     <%= render partial: "footer" %>
+                  </div>
+
+                  <div class='bottom'>
+                     <div class='col-md-6 col-xs-12 text-center'>
+                        <p>The Ironyard Copyright 2013. All Rights Reserved.</p>
+                     </div>
+
+                     <div class='col-md-6 col-xs-12 text-center'>
+                        <ul class='list-unstyled list-inline'>
+                           <li>Nav Item 1</li>
+                           <li>Nav Item 2</li>
+                           <li>Nav Item 3</li>
+                           <li>Nav Item 4</li>
+                        </div>
+                     </div>
+                  </footer>
+               </body>
+               </html>
