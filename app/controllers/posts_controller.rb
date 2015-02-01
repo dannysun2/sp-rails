@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
    Post = Struct.new(:permalink, :image_name, :content)
 
-  def detail
+  def post
      @posts = []
      @posts << Post.new("waffles-are-okay", "waffles.jpg", "A waffle is a leavened batter or dough cooked between two plates, patterned to give a characteristic size, shape and surface impression. There are many variations based on the type of waffle iron and recipe used. Waffles are eaten throughout the world, particularly in Belgium, France, Netherlands, Germany, Poland, Hungary, Scandinavia, United States, with over a dozen regional varieties in Belgium alone.[1]")
      @posts << Post.new("pancakes-are-better", "pancakes.jpg", "A pancake is a flat cake, often thin, and round, prepared from a starch-based batter and cooked on a hot surface such as a griddle or frying pan. In Britain, pancakes are often unleavened, and resemble a crêpe. In North America, a raising agent is used (typically baking powder). The North American pancake is similar to a Scotch pancake or drop scone.
