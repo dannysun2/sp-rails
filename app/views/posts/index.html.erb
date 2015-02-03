@@ -1,5 +1,1 @@
-<h1><%=  @posts[-1].permalink.gsub("-", ' ') %></h1>
-</br>
-   <%= image_tag @posts[-1].image_name, :class => "img-responsive" %>
-</br>
-<p><%=  @posts[-1].content %></p>
+<%= render partial: 'post' %>

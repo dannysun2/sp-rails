@@ -1,14 +1,14 @@
-<% i=-1 %>
-<% -1.downto(-4) do%>
+
+<% @posts.reverse.each do |post| %>
    <div class='col-md-3 col-sm-4 col-xs-12'>
-      <div class="cage" style="background: url(<%= image_path @posts[i].image_name%>); background-position: 28%; background-size: 200%">
+     <%= link_to post_path(post.permalink) do %>
+      <div class="cage" style="background: url(<%= image_path post.image_name%>); background-position: 28%; background-size: 200%">
          <div class="overlay">
-            <a href="<%root_path%>/posts/<%=@posts[i].permalink%>">
                <h1 class='text-right'>
-                  <%= @posts[i].permalink.gsub("-", ' ').upcase%>
-                  </h1></a>
-                  </div>
+                  <%= post.permalink.gsub("-", ' ').upcase%>
+                </h1>
+          </div>
       </div>
+      <% end %>
    </div>
-   <% i -= 1 %>
-   <% end %>
+ <% end %>
