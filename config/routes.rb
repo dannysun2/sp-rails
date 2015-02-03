@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-   root 'posts#index'
+  root 'posts#index'
 
   get 'posts/:id' => "posts#post", as: :post
   # The priority is based upon order of creation: first created -> highest priority.
